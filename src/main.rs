@@ -226,7 +226,7 @@ fn process_rust_file(args: Args, input_path: PathBuf, state: &mut BuildState) {
                     }
 
                     state.types.push_str(&format!(
-                        "interface {interface_name} {{\n",
+                        "export interface {interface_name} {{\n",
                         interface_name = exported_struct.ident.to_string()
                     ));
                     for field in exported_struct.fields {
